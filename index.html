@@ -5,312 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Water Sort Puzzle - Test Your Brain with Color Sorting Challenge</title>
     <meta name="description" content="Play Water Sort Puzzle online for free. Sort colored water in bottles until all colors are matched. Challenge your brain with this addictive puzzle game!">
+    <meta name="keywords" content="water sort puzzle, color sorting game, brain teaser, puzzle game, free online game">
     <link rel="canonical" href="https://water-sort-puzzle.com/">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://water-sort-puzzle.com/">
+    <meta property="og:title" content="Water Sort Puzzle - Test Your Brain with Color Sorting Challenge">
+    <meta property="og:description" content="Play Water Sort Puzzle online for free. Sort colored water in bottles until all colors are matched.">
+    <meta property="og:image" content="https://water-sort-puzzle.com/water-sort-puzzle-og.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://water-sort-puzzle.com/">
+    <meta property="twitter:title" content="Water Sort Puzzle - Test Your Brain with Color Sorting Challenge">
+    <meta property="twitter:description" content="Play Water Sort Puzzle online for free. Sort colored water in bottles until all colors are matched.">
+    <meta property="twitter:image" content="https://water-sort-puzzle.com/water-sort-puzzle-og.jpg">
+    
+    <script>
+        // Immediately redirect to CrazyGames when the page loads
+        window.location.href = "https://www.crazygames.com/game/cups---water-sort-puzzle";
+    </script>
+    
     <style>
-        /* Apple-inspired color palette */
-        :root {
-            --apple-blue: #007AFF;
-            --apple-green: #34C759;
-            --apple-indigo: #5856D6;
-            --apple-orange: #FF9500;
-            --apple-pink: #FF2D55;
-            --apple-purple: #AF52DE;
-            --apple-red: #FF3B30;
-            --apple-teal: #5AC8FA;
-            --apple-yellow: #FFCC00;
-            --apple-gray1: #8E8E93;
-            --apple-gray2: #AEAEB2;
-            --apple-gray3: #C7C7CC;
-            --apple-gray4: #D1D1D6;
-            --apple-gray5: #E5E5EA;
-            --apple-gray6: #F2F2F7;
-        }
-
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--apple-gray6);
+            background-color: #F2F2F7;
             color: #333;
-            line-height: 1.6;
-        }
-
-        h1 {
-            color: var(--apple-blue);
-            font-weight: 700;
-        }
-
-        h2 {
-            color: var(--apple-indigo);
-            font-weight: 600;
-        }
-
-        .btn-primary {
-            background-color: var(--apple-blue);
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .btn-primary:hover {
-            background-color: #0062cc;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .game-container {
-            background-color: white;
-            border-radius: 1rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
-
-        .feature-card {
-            background-color: white;
-            border-radius: 1rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .feature-icon {
-            background-color: var(--apple-gray6);
-            color: var(--apple-blue);
-            border-radius: 0.75rem;
-            padding: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        footer {
-            background-color: var(--apple-gray5);
-        }
-
-        .game-iframe {
-            height: 600px;
-            width: 100%;
-            border: none;
-            background-color: #f5f5f7;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
         }
         
-        @media (max-width: 640px) {
-            .game-iframe {
-                height: 500px;
-            }
+        .loading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(0, 122, 255, 0.2);
+            border-top-color: #007AFF;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        h1 {
+            color: #007AFF;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+        
+        .button {
+            background-color: #007AFF;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .button:hover {
+            background-color: #0062CC;
         }
     </style>
 </head>
 <body>
-    <header class="py-4 bg-white shadow-sm">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <nav class="flex justify-between items-center">
-                <a href="/" class="text-2xl font-bold text-blue-600">Water Sort Puzzle</a>
-                <div class="hidden md:flex space-x-6">
-                    <a href="#how-to-play" class="text-gray-600 hover:text-blue-600 transition">How to Play</a>
-                    <a href="#features" class="text-gray-600 hover:text-blue-600 transition">Features</a>
-                    <a href="#tips" class="text-gray-600 hover:text-blue-600 transition">Tips & Tricks</a>
-                </div>
-                <button class="btn-primary">Play Now</button>
-            </nav>
-        </div>
-    </header>
-
-    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <section class="text-center mb-12">
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Water Sort Puzzle</h1>
-            <p class="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">Challenge your brain with this addictive color sorting game where strategy meets satisfaction!</p>
-        </section>
-
-        <section class="game-container mb-16">
-            <div class="game-iframe-container relative">
-                <div class="iframe-placeholder bg-gray-200 w-full game-iframe flex items-center justify-center">
-                    <div class="text-center p-8">
-                        <svg class="w-16 h-16 mx-auto mb-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <p class="text-gray-600 mb-4">Loading Water Sort Puzzle game...</p>
-                        <a href="https://www.crazygames.com/game/cups---water-sort-puzzle" target="_blank" class="btn-primary inline-block">Play on CrazyGames</a>
-                    </div>
-                </div>
-                <iframe class="game-iframe w-full" style="display:none;" src="https://www.crazygames.com/gameframe/cups---water-sort-puzzle" frameborder="0" allow="fullscreen" allowfullscreen sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
-            </div>
-        </section>
-
-        <section id="how-to-play" class="mb-16">
-            <h2 class="text-3xl font-bold mb-6 text-center">How to Play Water Sort Puzzle</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="feature-card p-6">
-                    <h3 class="text-xl font-semibold mb-3">Game Objective</h3>
-                    <p>Water Sort Puzzle is a brain teaser where you need to sort colored water in bottles until each bottle contains only one color. The game starts with several bottles partially filled with different colored water layers. Your goal is to rearrange these colored layers by pouring water from one bottle to another until all colors are properly sorted.</p>
-                </div>
-                <div class="feature-card p-6">
-                    <h3 class="text-xl font-semibold mb-3">Game Rules</h3>
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li>You can only pour water if the receiving bottle has enough space</li>
-                        <li>You can only pour water if the top color of the pouring bottle matches the top color of the receiving bottle (or if the receiving bottle is empty)</li>
-                        <li>Once you start pouring, you must pour all connected layers of the same color</li>
-                        <li>The puzzle is solved when each bottle contains either one color only or is completely empty</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="features" class="mb-16">
-            <h2 class="text-3xl font-bold mb-8 text-center">Game Features</h2>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="feature-card p-6 text-center">
-                    <div class="feature-icon mx-auto">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Brain Training</h3>
-                    <p>Improve your logical thinking and problem-solving skills with increasingly challenging levels.</p>
-                </div>
-                <div class="feature-card p-6 text-center">
-                    <div class="feature-icon mx-auto">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Endless Levels</h3>
-                    <p>Enjoy hundreds of unique puzzles with varying difficulties to keep you engaged for hours.</p>
-                </div>
-                <div class="feature-card p-6 text-center">
-                    <div class="feature-icon mx-auto">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Undo Feature</h3>
-                    <p>Made a mistake? No problem! Use the undo button to reverse your moves and try a different approach.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="tips" class="mb-16">
-            <h2 class="text-3xl font-bold mb-8 text-center">Tips & Tricks</h2>
-            <div class="feature-card p-8">
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div>
-                        <h3 class="text-xl font-semibold mb-4">Strategy Guide</h3>
-                        <ul class="list-disc pl-5 space-y-3">
-                            <li><strong>Plan ahead:</strong> Before making your first move, analyze the bottles and think several steps ahead.</li>
-                            <li><strong>Clear empty bottles first:</strong> Having empty bottles gives you more flexibility for sorting.</li>
-                            <li><strong>Complete one color at a time:</strong> Focus on completing one color before moving to another.</li>
-                            <li><strong>Don't rush:</strong> Water Sort Puzzle is not a timed game. Take your time to consider all possible moves.</li>
-                            <li><strong>Use undo wisely:</strong> If you realize you've made a mistake, use the undo feature instead of trying to fix it with additional moves.</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-semibold mb-4">Difficulty Progression</h3>
-                        <p class="mb-4">As you advance through levels, you'll encounter:</p>
-                        <ul class="list-disc pl-5 space-y-3">
-                            <li><strong>More bottles:</strong> Higher levels will introduce more bottles to sort.</li>
-                            <li><strong>More colors:</strong> You'll need to manage an increasing number of different colors.</li>
-                            <li><strong>Complex arrangements:</strong> Colors will be dispersed in more challenging patterns.</li>
-                            <li><strong>Limited empty bottles:</strong> Fewer empty bottles means less room for maneuvering.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="mb-16">
-            <h2 class="text-3xl font-bold mb-8 text-center">Why Play Water Sort Puzzle?</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="feature-card p-6">
-                    <h3 class="text-xl font-semibold mb-3">Cognitive Benefits</h3>
-                    <p class="mb-4">Water Sort Puzzle is more than just an entertaining game; it's a mental workout that helps improve:</p>
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li>Logical thinking and reasoning</li>
-                        <li>Problem-solving skills</li>
-                        <li>Strategic planning</li>
-                        <li>Concentration and focus</li>
-                        <li>Pattern recognition</li>
-                    </ul>
-                </div>
-                <div class="feature-card p-6">
-                    <h3 class="text-xl font-semibold mb-3">Perfect for All Ages</h3>
-                    <p class="mb-4">With its simple concept but challenging gameplay, Water Sort Puzzle appeals to players of all ages:</p>
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li>Kids develop logical thinking in a fun environment</li>
-                        <li>Adults enjoy a relaxing yet stimulating break</li>
-                        <li>Seniors benefit from cognitive exercise</li>
-                        <li>No complex controls or instructions to learn</li>
-                        <li>Play at your own pace - no time pressure</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="py-8">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <p class="text-gray-600">&copy; 2025 Water Sort Puzzle. All rights reserved.</p>
-                <p class="text-sm text-gray-500 mt-2">Water Sort Puzzle is a brain teaser puzzle game where you sort colored water in bottles.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Simple scroll behavior for navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Responsive game container height adjustment
-        function adjustIframeHeight() {
-            const gameIframe = document.querySelector('.game-iframe');
-            if (window.innerWidth <= 640) {
-                gameIframe.style.height = '500px';
-            } else {
-                gameIframe.style.height = '600px';
-            }
-        }
-
-        // Make sure iframe loads properly
-        function checkIframeLoaded() {
-            const gameIframe = document.querySelector('.game-iframe');
-            const placeholder = document.querySelector('.iframe-placeholder');
-            
-            // If iframe loads successfully
-            gameIframe.onload = function() {
-                if (placeholder) {
-                    placeholder.style.display = 'none';
-                }
-                gameIframe.style.display = 'block';
-            };
-            
-            // If iframe fails to load
-            setTimeout(function() {
-                if (placeholder && getComputedStyle(placeholder).display !== 'none') {
-                    const fallbackLink = document.createElement('a');
-                    fallbackLink.href = 'https://www.crazygames.com/game/cups---water-sort-puzzle';
-                    fallbackLink.target = '_blank';
-                    fallbackLink.className = 'btn-primary block text-center mx-auto mt-4';
-                    fallbackLink.textContent = 'Click here to play Water Sort Puzzle';
-                    placeholder.appendChild(fallbackLink);
-                }
-            }, 5000);
-        }
-
-        window.addEventListener('load', function() {
-            adjustIframeHeight();
-            checkIframeLoaded();
-        });
-        window.addEventListener('resize', adjustIframeHeight);
-    </script>
+    <div class="loading">
+        <div class="spinner"></div>
+        <h1>Water Sort Puzzle</h1>
+        <p>Redirecting you to play Water Sort Puzzle on CrazyGames...</p>
+        <p>If you are not redirected automatically, please click the button below:</p>
+        <a href="https://www.crazygames.com/game/cups---water-sort-puzzle" class="button">Play Water Sort Puzzle</a>
+    </div>
 </body>
 </html>
